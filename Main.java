@@ -102,7 +102,7 @@ public class Main {
         m1.beber();
         */
         /**=============================EJERCICIO 8===================================*/
-
+        /*
         System.out.print("Ingrese el nombre: ");
         name = in.next();
         System.out.print("Ingrese la edad: ");
@@ -119,10 +119,10 @@ public class Main {
         System.out.println(p1);
         p1.imcMjs(p1);
         p1.compAge(p1.age(edad));
-
+        */
         /**=============================EJERCICIO 9===================================*/
 
-
+        Persona p1 = new Persona();
 
 
 
