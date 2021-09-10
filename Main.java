@@ -122,9 +122,9 @@ public class Main {
         */
         /**=============================EJERCICIO 9===================================*/
 
-        Persona p1 = new Persona();
-
-
+        Password contrasenia = new Password();
+        System.out.println(contrasenia);
+        System.out.println(contrasenia.esFuerte(contrasenia.pass.getPassword()));
 
 
     }
