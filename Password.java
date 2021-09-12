@@ -2,19 +2,30 @@ package POO;
 
 public class Password {
 
-    PasswordGenerator pass = new PasswordGenerator();
-    private final int longitud;
-    private final String pswd;
+    int longitud;
+    private String pswd;
 
 
     public Password(){
         this.longitud = 8;
-        this.pswd = pass.getPassword();
+        this.pswd = passwordGen();
     }
 
     public Password(int longitud){
         this.longitud = longitud;
-        this.pswd = pass.getPassword();
+        this.pswd = passwordGen();
+    }
+
+    public String getPswd() {
+        return pswd;
+    }
+
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
     }
 
     public boolean esFuerte(String o){
@@ -36,6 +47,23 @@ public class Password {
         if (min >= 1) passTotal += min;
         if (number >=5) passTotal *=number;
         return passTotal >= 8;
+    }
+
+    public String passwordGen() {
+        String key = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
+        String pswd = "";
+        for (int i = 0; i < 8; i++) {
+            pswd+=(key.charAt((int) (Math.random() * key.length())));
+        }
+        return pswd.toString();
+    }
+    public String passwordGenUser(int length) {
+        String key = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz";
+        String pswd = "";
+        for (int i = 0; i < length; i++) {
+            pswd+=(key.charAt((int) (Math.random() * key.length())));
+        }
+        return pswd.toString();
     }
 
     @Override

@@ -121,11 +121,14 @@ public class Main {
         p1.compAge(p1.age(edad));
         */
         /**=============================EJERCICIO 9===================================*/
-
+        /*
         Password contrasenia = new Password();
         System.out.println(contrasenia);
-        System.out.println(contrasenia.esFuerte(contrasenia.pass.getPassword()));
+        System.out.println(contrasenia.passwordGen());
+        */
+        /**=============================EJERCICIO 10===================================*/
 
+        Videojuego v1 = new Videojuego();
 
     }
 }
